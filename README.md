@@ -1,4 +1,4 @@
-# cloud
+# Cloud
 
 This repository has source code used for my medium stories.
 
