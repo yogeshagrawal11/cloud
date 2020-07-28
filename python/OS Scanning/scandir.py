@@ -56,3 +56,13 @@ if __name__ == '__main__':
     run_glob()
     run_pathlib_iterdir()
     run_os_listdir()
+
+    
+##################. Script output 
+'''    
+os.scandir              took 0 ms.      Found dirs: 74
+os.walk                 took 10504 ms. Found dirs: 46166
+glob.glob               took 3 ms. Found dirs: 74
+pathlib.iterdir took 2 ms. Found dirs: 74
+os.listdir              took 2 ms. Found dirs: 74
+'''
