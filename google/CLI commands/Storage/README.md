@@ -68,9 +68,13 @@ Connect to Cloud SQL instance
   
 # Cloud Datastore 
   Import/Export datastore database
+  
     gcloud –namespaces='[NAMESPACE]' gs://[BUCKET_NAME}
+    
     gcloud datastore export –namespaces='(default)' gs://[BUCKET_NAME] ### to export databse
+    
     gcloud datastore import gs://[BUCKET]/[PATH]/[FILE].overall_export_metadata ## to import datanase
+    
     
     
     
