@@ -33,10 +33,15 @@ Bigtable HBASE operations
      
 CLI ACCESS
   cbt createtable [tablename]
+  
   cbt ls
+  
   cbt createfamily [tablename] [family name]
+  
   cbt set [tablename] [rowid] [colfamily]:[colume name]=[value] #### to add row and colume
+  
   cbt read [tablename]
+  
 
 
 # Cloud SQL
