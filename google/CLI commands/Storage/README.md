@@ -46,12 +46,19 @@ Cloud SQL Instance list
 
 Connect to Cloud SQL instance
   gcloud sql connect [INSTANCE-NAME] --user=root
+  
   gcloud sql backups create ––async ––instance [INSTANCE_NAME] #### on demand backup
+  
   gcloud sql instances patch [INSTANCE_NAME] –backup-start-time [HH:MM] #### automatic backup
+  
   gcloud sql instances describe [INSTANCE_NAME] ### to get details about database and service account
+  
   gsutil acl ch -u [SERVICE_ACCOUNT_ADDRESS]:W gs://[BUCKET_NAME] ### db service account access to write data to cloud storage bucket
+  
   gcloud sql export sql [INSTANCE_NAME] gs://[BUCKET_NAME]/[FILE_NAME] --database=[DATABASE_NAME] ### export cloud sql database to cloud storage
+  
   gcloud sql import sql [INSTANCE_NAME] gs://[BUCKET_NAME]/[IMPORT_FILE_NAME] --database=[DATABASE_NAME] ### to import database
+  
   
   
 # Cloud Datastore 
