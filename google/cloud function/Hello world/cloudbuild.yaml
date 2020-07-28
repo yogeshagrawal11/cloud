@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - hello_world
+  - --region=us-central1
+  - --memory=128
+  - --runtime=python37
+  - --source=.
+  - --trigger-http
