@@ -1,3 +1,7 @@
+# Medium link 
+
+https://medium.com/@Yogesh_agrawal/aws-ec2-instance-management-starting-and-storage-instances-using-tagging-43e8b42f4342
+
 
 
 # Architechture Diagram 
