@@ -1,0 +1,59 @@
+Name,Latitude,Longitude,State,Est_Year,Est_Day,Sq-mi,Sq_km,Maxelev_ft,Minelev_ft??,NPS_URL
+Acadia,44.35,-68.216667,Maine,1919,26-Feb,47,123,1528,0,http://www.nps.gov/acad/index.htm
+American Samoa,-14.258333,-170.683333,American Samoa,1988,31-Oct,14,36,3000,-1,http://www.nps.gov/npsa/index.htm
+Arches,38.683333,-109.566667,Utah,1971,12-Nov,119,309,5653,3960,http://www.nps.gov/arch/index.htm
+Badlands,43.75,-102.5,South Dakota,1978,10-Nov,379,982,3340,2365,http://www.nps.gov/badl/index.htm
+Big Bend,29.25,-103.25,Texas,1944,12-Jun,1252,3242,7825,1715,http://www.nps.gov/bibe/index.htm
+Biscayne,25.65,-80.083333,Florida,1980,28-Jun,207,700,9,-1,http://www.nps.gov/bisc/index.htm
+Black Canyon of the Gunnison,38.566667,-107.716667,Colorado,1999,21-Oct,51,133,9040,5440,http://www.nps.gov/blca/index.htm
+Bryce Canyon,37.566667,-112.183333,Utah,1924,7-Jun,56,145,9115,6565,http://www.nps.gov/brca/index.htm
+Canyonlands,38.2,-109.933333,Utah,1964,12-Sep,527,1366,7120,3730,http://www.nps.gov/cany/index.htm
+Capitol Reef,38.2,-111.166667,Utah,1971,18-Dec,378,979,8960,3877,http://www.nps.gov/care/index.htm
+Carlsbad Caverns,32.175278,-104.443889,New Mexico,1930,14-May,73,189,6535,3596,http://www.nps.gov/cave/index.htm
+Channel Islands,34.008333,-119.416667,California,1980,5-Mar,390,1010,1812,-1,http://www.nps.gov/chis/index.htm
+Congaree,33.783333,-80.783333,South Carolina,2003,10-Nov,33,88,140,80,http://www.nps.gov/cong/index.htm
+Crater Lake,42.941517,-122.15114,Oregon,1902,22-May,286,741,8929,3990,http://www.nps.gov/crla/index.htm
+Cuyahoga Valley,41.241667,-81.549722,Ohio,2000,11-Oct,51,134,1164,590,http://www.nps.gov/cuva/index.htm
+Death Valley,36.241944,-116.825833,"California, Nevada",1994,31-Oct,5219,13518,11049,-282,http://www.nps.gov/deva/index.htm
+Denali,63.333333,-150.5,Alaska,1917,26-Feb,9492,24585,20320,240,http://www.nps.gov/dena/index.htm
+Dry Tortugas,24.628611,-82.873333,Florida,1992,26-Oct,101,262,10,-1,http://www.nps.gov/drto/index.htm
+Everglades,25.316667,-80.933333,Florida,1947,6-Dec,2357,6105,20,0,http://www.nps.gov/ever/index.htm
+Gates of the Arctic,67.783333,-153.3,Alaska,1980,2-Dec,13238,39460,8276,280,http://www.nps.gov/gaar/index.htm
+Glacier,48.8,-114,Montana,1910,11-May,1584,4101,10466,3150,http://www.nps.gov/glac/index.htm
+Glacier Bay,58.5,-137,Alaska,1980,2-Dec,5130,13287,15300,0,http://www.nps.gov/glba/index.htm
+Grand Canyon,36.0575,-112.1375,Arizona,1919,26-Feb,1902,4927,9165,1173,http://www.nps.gov/grca/index.htm
+Grand Teton,43.733333,-110.803333,Wyoming,1929,26-Feb,484,1255,13770,6310,http://www.nps.gov/grte/index.htm
+Great Basin,38.983333,-114.3,Nevada,1986,27-Oct,120,312,13065,6195,http://www.nps.gov/grba/index.htm
+Great Sand Dunes,37.73287,-105.51212,Colorado,2004,24-Sep,133,343,13604,7520,http://www.nps.gov/grsa/index.htm
+Great Smoky Mountains,35.683333,-83.533333,"North Carolina, Tennessee",1934,15-Jun,814,2108,6643,874,http://www.nps.gov/grsm/index.htm 
+Guadalupe Mountains,31.916667,-104.866667,Texas,1966,15-Oct,135,350,8749,3636,http://www.nps.gov/gumo/index.htm
+Haleakala,20.716667,-156.166667,Hawaii,1916,1-Aug,46,118,10023,0,http://www.nps.gov/hale/index.htm
+Hawaii Volcanoes,19.383333,-155.2,Hawaii,1916,1-Aug,505,1309,13679,0,http://www.nps.gov/havo/index.htm
+Hot Springs,34.513611,-93.053611,Arkansas,1921,4-Mar,9,22,1405,415,http://www.nps.gov/hosp/index.htm
+Isle Royale,48.1,-88.55,Michigan,1931,3-Mar,894,2314,1394,600,http://www.nps.gov/isro/index.htm
+Joshua Tree,33.788394,-115.898222,California,1994,31-Oct,1234,3196,5813,1780,http://www.nps.gov/jotr/index.htm
+Katmai,58.5,-155,Alaska,1980,2-Dec,5288,13696,7606,0,http://www.nps.gov/katm/index.htm
+Kenai Fjords,59.916667,-149.65,Alaska,1980,2-Dec,1094,2833,6450,0,http://www.nps.gov/kefj/index.htm
+Kings Canyon,36.8,-118.55,California,1940,4-Mar,722,1869,14242,3480,http://www.nps.gov/seki/index.htm
+Kobuk Valley,67.55,-159.283333,Alaska,1980,2-Dec,2609,6757,4760,40,http://www.nps.gov/kova/index.htm
+Lake Clark,60.966667,-153.416667,Alaska,1980,2-Dec,6297,16308,10197,0,http://www.nps.gov/lacl/index.htm
+Lassen Volcanic,40.488056,-121.505,California,1916,9-Aug,166,429,10457,5275,http://www.nps.gov/lavo/index.htm
+Mammoth Cave,37.183333,-86.1,Kentucky,1941,1-Jul,83,214,925,421,http://www.nps.gov/maca/index.htm
+Mesa Verde,37.183784,-108.488687,Colorado,1906,29-Jun,81,211,8571,6015,http://www.nps.gov/meve/index.htm
+Mount Rainier,46.85,-121.75,Washington,1899,2-Mar,368,954,14411,1610,http://www.nps.gov/mora/index.htm
+North Cascades,48.7,-121.2,Washington,1968,2-Oct,789,2045,9206,605,http://www.nps.gov/noca/index.htm
+Olympic,47.969444,-123.498333,Washington,1938,29-Jun,1442,3734,7962,0,http://www.nps.gov/olym/index.htm
+Petrified Forest,35.066111,-109.780833,Arizona,1962,9-Dec,341,885,6234,5200,http://www.nps.gov/pefo/index.htm
+Redwood,41.166667,-123.983333,California,1968,2-Oct,176,455,3170,0,http://www.nps.gov/redw/index.htm
+Rocky Mountain,40.4,-105.583333,Colorado,1915,26-Jan,415,1078,14259,7630,http://www.nps.gov/romo/index.htm
+Saguaro,32.25,-110.5,Arizona,1994,4-Oct,143,370,8666,2180,http://www.nps.gov/sagu/index.htm
+Sequoia,36.433333,-118.683333,California,1890,25-Sep,631,1635,14505,1360,http://www.nps.gov/seki/index.htm
+Shenandoah,38.533333,-78.35,Virginia,1935,26-Dec,311,805,4051,530,http://www.nps.gov/shen/index.htm
+Theodore Roosevelt,46.966667,-103.45,North Dakota,1978,10-Nov,110,285,2860,1940,http://www.nps.gov/thro/index.htm
+Virgin Islands,18.333333,-64.733333,U.S. Virgin Islands,1956,2-Aug,23,59,1277,-1,http://www.nps.gov/viis/index.htm
+Voyageurs,48.5,-92.883333,Minnesota,1975,8-Apr,341,882,1410,1108,http://www.nps.gov/voya/index.htm
+Wind Cave,43.566667,-103.483333,South Dakota,1903,9-Jan,44,114,5013,3559,http://www.nps.gov/wica/index.htm
+Wrangell-St. Elias,61,-142,Alaska,1980,2-Dec,20587,53321,18008,0,http://www.nps.gov/wrst/index.htm
+Yellowstone,44.6,-110.5,"Idaho, Montana, Wyoming",1872,1-Mar,3470,8980,11358,5282,http://www.nps.gov/yell/index.htm 
+Yosemite,37.833333,-119.5,California,1890,1-Oct,1189,3081,13114,2105,http://www.nps.gov/yose/index.htm
+Zion,37.3,-113.05,Utah,1919,19-Nov,229,593,8726,3640,http://www.nps.gov/zion/index.htm
