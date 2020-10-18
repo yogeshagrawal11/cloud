@@ -1,0 +1,92 @@
+#########################################################################
+#
+#  Calculate Arithmatic values. Two step worflow 
+#
+#   Input 
+#   {"firstno":10,"secondno":5,"task":"subtract"}
+#   firstno = integer
+#   secondno = integer
+#   task = add, subtract or multiply
+#
+#########################################################################
+
+
+### Step to select task that needed to perform 
+- selectTask:
+    switch:
+        - condition: ${ args.task == "add"}
+          next: add_cloud_function
+
+        - condition: ${ args.task == "subtract"}
+          next: subtract_cloud_function
+      
+        - condition: ${ args.task == "multiply"}    
+          next: multi_cloud_function
+    next: finalize
+
+
+
+## Adding two numbers 
+- add_cloud_function:
+    call: http.get
+    args:
+        url: https://us-west3-yagrawal999.cloudfunctions.net/cl_funct_add
+        headers:
+            Content-Type: "text/plain"
+        query:
+            firstno: ${ args.firstno }
+            secondno: ${ args.secondno }
+    result: outputfromFirst
+    next: sq_cloud_function
+
+## Subtract two numbers
+- subtract_cloud_function:
+    call: http.get
+    args:
+        url: https://us-west3-yagrawal999.cloudfunctions.net/cl_funct_subtract
+        headers:
+            Content-Type: "text/plain"
+        query:
+            firstno: ${ args.firstno }
+            secondno: ${ args.secondno }
+    result: outputfromFirst
+    next: sq_cloud_function
+
+
+# Multiply two numbers 
+- multi_cloud_function:
+    call: http.get
+    args:
+        url: https://us-west3-yagrawal999.cloudfunctions.net/cl_funct_multi
+        headers:
+            Content-Type: "text/plain"
+        query:
+            firstno: ${ args.firstno }
+            secondno: ${ args.secondno }
+    result: outputfromFirst
+    next: sq_cloud_function
+
+
+# this is second step. SQ 
+- sq_cloud_function:
+    call: http.get
+    args:
+        url: https://us-west3-yagrawal999.cloudfunctions.net/cl_funct_sq
+        headers:
+            Content-Type: "text/plain"
+        query:
+            firstno: ${ outputfromFirst.body.output }
+    result: outputfromSecond
+    next: returnvalue
+
+
+- returnvalue:
+    assign:
+        - return_output_value : ${ "Output value - "  + string( outputfromSecond.body.output ) }
+
+- returnvalueoutput:
+    return: ${ return_output_value }
+
+  
+- finalize:
+    return: "No correct task type selected. Please select 'add', 'subtract' and 'multiply' task type"
