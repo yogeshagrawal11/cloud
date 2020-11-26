@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+
+  Create Bucket with random string in bucketname. We will be using Randomizer Stack's Lambda function to create random string.
+
+  From - 
+  http://cloudtechsavvy.com
+
+
+Parameters:
+  RandomStringLength:
+    Type: Number
+    Default: 6
+
+
+Resources: 
+
+  RandomizerLambda:
+    Type: "Custom::RandomizerLambda"
+    Properties:
+      ServiceToken: !ImportValue RandomizerLambdaArn
+      length: !Ref RandomStringLength  ## Length of random string needed
+
+
+
+
+  S3bucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: !Join ["-", ["cloudtechsavvy", !GetAtt RandomizerLambda.Lower_RandomString ]]
+      VersioningConfiguration: 
+        Status: Enabled
+
+
+Outputs:
+    
+  RandomString:                                           # Random string with Alphanumeric charecter
+    Value: !GetAtt RandomizerLambda.RandomString
+  LowerRandomString:                                      # Lower case Alphabets and numberric charecter needed for creating S3bucket like object
+    Value: !GetAtt RandomizerLambda.Lower_RandomString
+  UpperRandomString:                                      # Uppder case Alphabets and numberric charecter. In case needed to create lambda functions
+    Value: !GetAtt RandomizerLambda.UpperRandomString
+  RandomNumber:                                           # Random numeric charecter
+    Value: !GetAtt RandomizerLambda.RandomNumber
+
+
+
+  bucketname:
+    Value: !Ref S3bucket
+
+
+  

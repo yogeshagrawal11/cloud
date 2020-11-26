@@ -1,0 +1,111 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+
+  Randamizer Template for everyone to use. This template will generate Alphanumeric charecter string for given length. 
+  Following types of random string will be generated - 
+    Random Alpha numeric string
+    Random 
+
+  https://cloudtechsavvy.com
+
+Parameters:
+  RandomStringLength:
+    Type: Number
+    Default: 6
+
+
+Resources: 
+
+  LambdaRole: 
+    Type: "AWS::IAM::Role"
+    Properties: 
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "lambda.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+      Path: "/"
+
+  LambdaPolicy: 
+    Type: "AWS::IAM::Policy"
+    Properties: 
+      PolicyName: "LambdaPolicy"
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Action: 
+              - "logs:CreateLogStream"
+              - "logs:PutLogEvents"
+              - "logs:CreateLogGroup"
+            Resource: "*"
+      Roles: 
+        - 
+          Ref: "LambdaRole"
+
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.lambda_handler
+      Role: !GetAtt LambdaRole.Arn 
+      Runtime: python3.7
+      Tags:
+        - Key : Name
+          Value : RandomizerLambda
+
+
+      Code:
+        ZipFile: |
+          import boto3
+          import random
+          import string
+          import cfnresponse
+          def lambda_handler(event, context):
+              responseData = {}
+
+              try:
+                  string_characters = string.ascii_letters + string.digits
+                  number_characters = string.digits
+                  responseData['RandomString']  = ''.join(random.choice(string_characters) for i in range(int(event["ResourceProperties"]["length"])))
+                  responseData['RandomNumber']  = ''.join(random.choice(number_characters) for i in range(int(event["ResourceProperties"]["length"])))
+                  responseData['Lower_RandomString'] = responseData['RandomString'].lower()
+                  responseData['UpperRandomString'] = responseData['RandomString'].upper()
+                  cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
+              except Exception as e:
+                  print("Exception Error : " + str(e) )
+                  cfnresponse.send(event, context, cfnresponse.FAILED, responseData, "CustomResourcePhysicalID")
+
+  ### this custom Call Lambda function is not needed for usage of this template. I like to provide example of calling Lambda function hence u see this code
+  CallLambda:
+    Type: "Custom::CallLambda"
+    Properties:
+      ServiceToken: !GetAtt LambdaFunction.Arn
+      length: !Ref  RandomStringLength  ## Random string length. Default 6. This will be access in lambda as event["ResourceProperties"]["length"]
+    
+
+
+Outputs:
+  RandomizerLambdaArn:
+    Value: !GetAtt LambdaFunction.Arn
+    Export: 
+      Name: RandomizerLambdaArn
+
+  ## If you removed CallLambda reosurce please remove all below output variable as well. AS they are dependant.
+  RandomString:                                           # Random string with Alphanumeric charecter
+    Value: !GetAtt CallLambda.RandomString
+  LowerRandomString:                                      # Lower case Alphabets and numberric charecter needed for creating S3bucket like object
+    Value: !GetAtt CallLambda.Lower_RandomString
+  UpperRandomString:                                      # Uppder case Alphabets and numberric charecter. In case needed to create lambda functions
+    Value: !GetAtt CallLambda.UpperRandomString
+  RandomNumber:                                           # Random numeric charecter
+    Value: !GetAtt CallLambda.RandomNumber
+
+
+  
