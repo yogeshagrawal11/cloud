@@ -5,11 +5,11 @@
 
 
 variable localip {
-  default = "73.53.79.47/32"
+  default = "0.0.0.0/0"
 }
 
 variable gcpprojectid {
-  default = "yagrawal999"
+  default = "cloudtechsavvy"
 
 }
 
@@ -26,7 +26,7 @@ provider "google" {
 ##############    Google network connectivity 
 
 variable bucketname {
-  default = "yogeshagrawal"
+  default = "cloudtechsavvy"
 }
 
 
